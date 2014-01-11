@@ -19,7 +19,6 @@
 			<label index="bestand.image">Image</label>
 			<label index="bestand.documents">Documents in the collection</label>
 			<label index="bestand.persons">Persons mentioned in the collection</label>
-</label>
 		</languageKey>
     <languageKey index="de" type="array">
     <label index="bestand">Ein Bestand des Archivs</label>
