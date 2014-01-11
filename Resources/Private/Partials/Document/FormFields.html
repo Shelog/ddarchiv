@@ -1,0 +1,66 @@
+<table>
+  <tr>
+    <td>
+      <label for="title">
+        <f:translate key="tx_ddarchiv_domain_model_document.title" /> <span class="required">(erforderlich)</span>
+      </label>
+    </td>
+    <td>      
+      <f:form.textarea property="title" rows="1" cols="50"/>
+    </td>
+  </tr> 
+  <tr>
+    <td>
+      <label for="description">
+        <f:translate key="tx_ddarchiv_domain_model_document.description" /> 
+      </label>
+    </td>
+    <td>      
+      <f:form.textarea property="description" rows="5" cols="50" />
+    </td>
+  </tr> 
+  <tr>
+    <td>
+      <label for="loc">
+        <f:translate key="tx_ddarchiv_domain_model_document.loc" /> 
+      </label>
+    </td>
+    <td>      
+      <f:form.textarea property="loc" rows="5" cols="50" />
+    </td>
+  </tr> 
+  <tr>
+    <td>
+      <label for="longitude">
+        <f:translate key="tx_ddarchiv_domain_model_document.longitude" /> 
+      </label>
+    </td>
+    <td>      
+      <f:form.textfield property="longitude" />
+    </td>
+  </tr> 
+  <tr>
+    <td>
+      <label for="latitude">
+        <f:translate key="tx_ddarchiv_domain_model_document.latitude" /> 
+      </label>
+    </td>
+    <td>      
+      <f:form.textfield property="latitude" />
+    </td>
+  </tr> 
+  <tr>
+ 
+    <td>
+           
+      <label for="persons">
+        <f:translate key="tx_ddarchiv_domain_model_document.persons" /> 
+      </label>
+    </td>
+    <td>     
+      <f:form.select property="persons" options="{person}" optionLabelField="name" multiple="true" size="5" />
+      
+    </td>
+  </tr>    
+</table>  
+  
