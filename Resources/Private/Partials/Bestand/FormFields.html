@@ -1,0 +1,92 @@
+<table>
+  <tr>
+    <td>
+      <label for="name">
+        <f:translate key="tx_ddarchiv_domain_model_bestand.name" /> <span class="required">(erforderlich)</span>
+      </label>
+    </td><td>
+      <f:form.textarea property="name" rows="1" cols="50" />
+    </td>
+  </tr><tr>
+    <td>  
+      <label for="description">	
+        <f:translate key="tx_ddarchiv_domain_model_bestand.description" />
+      </label>
+    </td><td>   
+      <f:form.textarea property="description"  rows="5" cols="50" />
+    </td>
+  </tr><tr>
+    <td>
+      <label for="provenience">
+        <f:translate key="tx_ddarchiv_domain_model_bestand.provenience" />
+      </label>
+    </td><td>
+      <f:form.textarea property="provenience"  rows="5" cols="50" />
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <label for="year_from">
+        <f:translate key="tx_ddarchiv_domain_model_bestand.year_from" />
+      </label>
+    </td><td>
+      <f:form.textfield property="yearFrom" />
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <label for="year_to">
+        <f:translate key="tx_ddarchiv_domain_model_bestand.year_to" />
+      </label>
+    </td><td>
+      <f:form.textfield property="yearTo" />
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <label for="loc">
+        <f:translate key="tx_ddarchiv_domain_model_bestand.loc" />
+      </label>
+    </td><td>
+      <f:form.textfield property="loc" />
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <label for="longitude">
+        <f:translate key="tx_ddarchiv_domain_model_bestand.longitude" />
+      </label>
+    </td><td>
+      <f:form.textfield property="longitude" />
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <label for="latitude">
+        <f:translate key="tx_ddarchiv_domain_model_bestand.latitude" />
+      </label>
+    </td><td>
+      <f:form.textfield property="latitude" />
+      <p>
+        Das Bild f&uuml;r den Bestand kann im Moment nur &uuml;ber das Backend hochgeladen werden.  
+      </p>
+    </td>
+  </tr>
+                        <tr>
+ 
+    <td>
+           
+      <label for="persons">
+        <f:translate key="tx_ddarchiv_domain_model_document.persons" /> 
+      </label>
+    </td>
+    <td>     
+      <f:form.select property="persons" options="{persons}" value="{person}" optionLabelField="name" optionValueField="uid" multiple="true" size="5">
+       <select><option>dummy</option></select>
+      </f:form.select>
+      
+    </td>
+  </tr>   
+</table>
+                          
+  
