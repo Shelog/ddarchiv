@@ -1,0 +1,30 @@
+plugin.tx_ddarchiv {
+	view {
+		templateRootPath = {$plugin.tx_ddarchiv.view.templateRootPath}
+		partialRootPath = {$plugin.tx_ddarchiv.view.partialRootPath}
+		layoutRootPath = {$plugin.tx_ddarchiv.view.layoutRootPath}
+	}
+	persistence {
+		storagePid = {$plugin.tx_ddarchiv.persistence.storagePid}
+	}
+}
+
+plugin.tx_ddarchiv._CSS_DEFAULT_STYLE (
+	input.f3-form-error {
+		background-color:#FF9F9F;
+		border: 1px #FF0000 solid;
+	}
+
+	.tx-ddarchiv table {
+		border-collapse:separate;
+		border-spacing:10px;
+	}
+
+	.tx-ddarchiv table th {
+		font-weight:bold;
+	}
+
+	.tx-ddarchiv table td {
+		vertical-align:top;
+	}
+)

@@ -1,0 +1,14 @@
+plugin.tx_ddarchiv {
+	view {
+		# cat=plugin.tx_ddarchiv/file; type=string; label=Path to template root (FE)
+		templateRootPath = EXT:ddarchiv/Resources/Private/Templates/
+		# cat=plugin.tx_ddarchiv/file; type=string; label=Path to template partials (FE)
+		partialRootPath = EXT:ddarchiv/Resources/Private/Partials/
+		# cat=plugin.tx_ddarchiv/file; type=string; label=Path to template layouts (FE)
+		layoutRootPath = EXT:ddarchiv/Resources/Private/Layouts/
+	}
+	persistence {
+		# cat=plugin.tx_ddarchiv//a; type=int+; label=Default storage PID
+		storagePid = 
+	}
+}

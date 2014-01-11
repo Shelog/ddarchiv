@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<T3locallang>
+	<meta type="array">
+		<type>module</type>
+		<description>Language labels for the Village Archive extension in the FRONTEND</description>
+	</meta>
+	<data type="array">
+		<languageKey index="default" type="array">
+			<label index="tx_ddarchiv_domain_model_bestand">A collection in the archive</label>
+			<label index="tx_ddarchiv_domain_model_bestand.name">Name of the collection</label>
+			<label index="tx_ddarchiv_domain_model_bestand.description">Description</label>
+			<label index="tx_ddarchiv_domain_model_bestand.provenience">Provenience</label>
+			<label index="tx_ddarchiv_domain_model_bestand.year_from">From (year)</label>
+			<label index="tx_ddarchiv_domain_model_bestand.year_to">To (year)</label>
+			<label index="tx_ddarchiv_domain_model_bestand.loc">Physical location of the Collection</label>
+			<label index="tx_ddarchiv_domain_model_bestand.longitude">Longitude</label>
+			<label index="tx_ddarchiv_domain_model_bestand.latitude">Latitude</label>
+			<label index="tx_ddarchiv_domain_model_bestand.image">Image</label>
+			<label index="tx_ddarchiv_domain_model_bestand.documents">Documents in the collection</label>
+			<label index="tx_ddarchiv_domain_model_bestand.persons">Persons mentioned in the collection
+</label>
+			<label index="tx_ddarchiv_domain_model_document">Document</label>
+			<label index="tx_ddarchiv_domain_model_document.title">Title</label>
+			<label index="tx_ddarchiv_domain_model_document.description">Description</label>
+			<label index="tx_ddarchiv_domain_model_document.loc">Location of the document</label>
+			<label index="tx_ddarchiv_domain_model_document.doc_date">Date of the document</label>
+			<label index="tx_ddarchiv_domain_model_document.longitude">Longitude</label>
+			<label index="tx_ddarchiv_domain_model_document.latitude">Latitude</label>
+			<label index="tx_ddarchiv_domain_model_document.image">Image</label>
+			<label index="tx_ddarchiv_domain_model_document.persons">Persons mentionde in the document</label>
+			<label index="tx_ddarchiv_domain_model_person">Person</label>
+			<label index="tx_ddarchiv_domain_model_person.title">Academic title, nobility</label>
+			<label index="tx_ddarchiv_domain_model_person.name">Name</label>
+			<label index="tx_ddarchiv_domain_model_person.firstname">First Name</label>
+			<label index="tx_ddarchiv_domain_model_person.birth_year">Year of birth</label>
+			<label index="tx_ddarchiv_domain_model_person.birth_date_year">Date of birth</label>
+		</languageKey>
+    <languageKey index="de" type="array">
+      <label index="tx_ddarchiv_domain_model_bestand">Ein Bestand des Archivs</label>
+			<label index="tx_ddarchiv_domain_model_bestand.name">Name des Bestandes</label>
+			<label index="tx_ddarchiv_domain_model_bestand.description">Beschreibung</label>
+			<label index="tx_ddarchiv_domain_model_bestand.provenience">Herkunft</label>
+			<label index="tx_ddarchiv_domain_model_bestand.year_from">von (Jahr)</label>
+			<label index="tx_ddarchiv_domain_model_bestand.year_to">bis (Jahr)</label>
+			<label index="tx_ddarchiv_domain_model_bestand.loc">Standort (Karton, Mappe)</label>
+			<label index="tx_ddarchiv_domain_model_bestand.longitude">geographische Länge</label>
+			<label index="tx_ddarchiv_domain_model_bestand.latitude">geographische Breite</label>
+			<label index="tx_ddarchiv_domain_model_bestand.image">Bild</label>
+			<label index="tx_ddarchiv_domain_model_bestand.documents">Dokumente im Bestand</label>
+			<label index="tx_ddarchiv_domain_model_bestand.persons">Personen, auf die sich der Bestand bezieht
+</label>
+			<label index="tx_ddarchiv_domain_model_document">Dokument</label>
+			<label index="tx_ddarchiv_domain_model_document.title">Titel</label>
+			<label index="tx_ddarchiv_domain_model_document.description">Beschreibung</label>
+			<label index="tx_ddarchiv_domain_model_document.loc">Standort (Karton, Mappe, Seite)</label>
+			<label index="tx_ddarchiv_domain_model_document.doc_date">Datum des Dokuments</label>
+			<label index="tx_ddarchiv_domain_model_document.longitude">geographische Länge</label>
+			<label index="tx_ddarchiv_domain_model_document.latitude">geographische Breite</label>
+			<label index="tx_ddarchiv_domain_model_document.image">Bild</label>
+			<label index="tx_ddarchiv_domain_model_document.persons">Personen, auf die sich das Dokument bezieht</label>
+			<label index="tx_ddarchiv_domain_model_person">Person</label>
+			<label index="tx_ddarchiv_domain_model_person.title">akademischer Grad, Adelstitel</label>
+			<label index="tx_ddarchiv_domain_model_person.name">Familienname</label>
+			<label index="tx_ddarchiv_domain_model_person.firstname">Vorname</label>
+			<label index="tx_ddarchiv_domain_model_person.birth_year">Geburtsjahr</label>
+			<label index="tx_ddarchiv_domain_model_person.birth_date">Geburtsdatum (Jahr 1970 oder später)
+</label>
+  </languageKey>
+	</data>
+</T3locallang>

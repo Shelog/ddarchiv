@@ -1,0 +1,14 @@
+<f:layout name="Default" />
+
+<f:section name="main">
+<h1>Bestand bearbeiten</h1>
+
+<f:flashMessages />
+
+<f:render partial="FormErrors" />
+
+<f:form method="post" action="update" name="bestand" object="{bestand}" >
+<f:render partial="Bestand/FormFields" arguments="{bestand:bestand}" />
+	<f:form.submit value="Speichern" />
+</f:form>
+</f:section>

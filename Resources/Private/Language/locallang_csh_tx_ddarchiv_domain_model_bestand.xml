@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<T3locallang>
+	<meta type="array">
+		<description>Context Sensitive Help (CSH) for table tx_ddarchiv_domain_model_bestand</description>
+		<type>CSH</type>
+		<csh_table>tx_ddarchiv_domain_model_bestand</csh_table>
+	</meta>
+	<data type="array">
+	<languageKey index="default" type="array">
+			<label index="bestand">A collection in the archive</label>
+			<label index="bestand.name">Name of the collection</label>
+			<label index="bestand.description">Description</label>
+			<label index="bestand.provenience">Provenience</label>
+			<label index="bestand.year_from">From (year)</label>
+			<label index="bestand.year_to">To (year)</label>
+			<label index="bestand.loc">Physical location of the Collection</label>
+			<label index="bestand.longitude">Longitude</label>
+			<label index="bestand.latitude">Latitude</label>
+			<label index="bestand.image">Image</label>
+			<label index="bestand.documents">Documents in the collection</label>
+			<label index="bestand.persons">Persons mentioned in the collection</label>
+		</languageKey>
+    <languageKey index="de" type="array">
+    <label index="bestand">Ein Bestand des Archivs</label>
+			<label index="bestand.name">Name des Bestandes</label>
+			<label index="bestand.description">Beschreibung</label>
+			<label index="bestand.provenience">Herkunft</label>
+			<label index="bestand.year_from">von (Jahr)</label>
+			<label index="bestand.year_to">bis (Jahr)</label>
+			<label index="bestand.loc">Standort (Karton, Mappe)</label>
+			<label index="bestand.longitude">geographische Laenge</label>
+			<label index="bestand.latitude">geographische Breite</label>
+			<label index="bestand.image">Bild</label>
+			<label index="bestand.documents">Dokumente im Bestand</label>
+			<label index="bestand.persons">Personen, auf die sich der Bestand bezieht</label>
+    </languageKey>
+	</data>
+</T3locallang>
