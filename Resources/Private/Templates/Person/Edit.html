@@ -1,0 +1,16 @@
+<f:layout name="Default" />
+
+<f:section name="main">
+<h1>Personendatei bearbeiten</h1>
+
+<f:flashMessages />
+
+<f:render partial="FormErrors" />
+
+<f:form method="post" action="update" name="person" object="{person}" >
+<!--
+<f:render partial="Document/FormFields" arguments="{document:document}" />
+-->
+	<f:form.submit value="Speichern" />
+</f:form>
+</f:section>

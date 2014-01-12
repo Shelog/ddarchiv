@@ -1,0 +1,9 @@
+<h1>Neues Dokument für Bestand "{bestand.name}" anlegen</h1>
+
+<f:form method="post" controller="Document" action="create" name="newDocument" object="{newDocument}" arguments="{bestand : bestand}">
+
+  <f:render partial="Document/FormFields" />
+
+<f:form.submit value="speichern"> Dokument anlegen </f:form.submit>
+
+</f:form>

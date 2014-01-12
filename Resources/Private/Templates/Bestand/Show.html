@@ -1,0 +1,31 @@
+<f:layout name="Default" />
+
+<f:section name="main">
+
+<h1>{bestand.name}
+  <f:link.action action="edit" arguments="{bestand:bestand}">
+    <img src="<f:uri.image src='fileadmin/icons/edit.gif' />" />
+  </f:link.action>
+</h1>
+
+<f:flashMessages />
+
+<table>
+  <tr>
+    <td>
+      <img src="<f:uri.image src='uploads/tx_ddarchiv/{bestand.image}' width='400' />" />
+    </td>
+    <td width="400">
+	    <p>
+			{bestand.description}
+		  </p>
+    </td>
+  </tr>
+</table>
+
+<f:render partial="Bestand/Properties" arguments="{bestand:bestand}" />
+<p>
+<f:link.action action="list">Zur Listenansicht</f:link.action><br />
+</p>
+
+</f:section>

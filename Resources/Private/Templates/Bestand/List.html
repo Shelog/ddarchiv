@@ -1,0 +1,118 @@
+{namespace pb=Tx_Ddarchiv_ViewHelpers}
+
+<f:layout name="Default" />
+
+<f:section name="main">
+
+<h2>Liste der Best&auml;nde</h2>
+
+<f:flashMessages />
+
+<f:form method="post" action="list"  arguments="{documents:documents}" controller="Document" name="suche" object="{documents}">
+<f:form.textfield property="search" />
+	<f:form.submit value="Suche Dokument nach Titel" />
+</f:form>
+    
+<table  class="tx_ddarchiv" >
+	<f:for each="{bestands}" as="bestand">
+	<tr>
+    <td>
+      
+        <img src="<f:uri.image src='uploads/tx_ddarchiv/{bestand.image}' width='150' />" />
+      
+    </td>
+		<td width="500">
+      <f:link.action action="show" arguments="{bestand : bestand}"> 
+      {bestand.name} 
+      </f:link.action>  &nbsp;&nbsp;
+      
+     
+      <f:link.action action="edit" controller="Bestand" arguments="{bestand:bestand}">  
+          <img src="<f:uri.image src='fileadmin/icons/edit.gif' />" />
+      </f:link.action>
+     
+      <!--
+      <f:link.action action="delete" controller="Bestand" arguments="{bestand:bestand}">  
+          <img src="<f:uri.image src='fileadmin/icons/delete.gif' />" />
+      </f:link.action> 
+      -->
+      
+      <p>
+        {bestand.description}
+      </p>
+        <table>
+        <f:for each="{bestand.documents}" as="document">
+        <tr>
+          <td>
+            <img src="<f:uri.image src='uploads/tx_ddarchiv/{document.image}' width='100' />" />
+          </td>
+          <td>
+            <f:link.action action="show" controller="Document" arguments="{document:document}">
+            {document.title}
+            </f:link.action>
+            <f:link.action action="edit" controller="Document" arguments="{document:document}">  
+             <img src="<f:uri.image src='fileadmin/icons/edit.gif' />" />
+            </f:link.action>
+       <!--     
+            <f:link.action action="delete" controller="Document" arguments="{document:document, bestand:bestand}">  
+             <img src="<f:uri.image src='fileadmin/icons/delete.gif' />" />
+            </f:link.action> 
+         -->
+            <p>
+             {document.description}
+            </p>
+            <p>
+              Personen, auf die das Dokument Bezug nimmt:
+            </p>
+            <table>
+        <f:for each="{document.persons}" as="person">
+        <tr>
+          <td>
+            <f:link.action action="show" controller="Person" arguments="{person:person}">
+              {person.name}, {person.firstname}
+            </f:link.action>
+            <f:link.action action="edit" controller="Person" arguments="{person:person}">  
+             <img src="<f:uri.image src='fileadmin/icons/edit.gif' />" />
+            </f:link.action>
+            
+            
+       <!--     
+            <f:link.action action="delete" controller="Document" arguments="{document:document, bestand:bestand}">  
+             <img src="<f:uri.image src='fileadmin/icons/delete.gif' />" />
+            </f:link.action> 
+         -->
+            
+        </td>
+        </tr>
+        </f:for>
+       </table>
+            
+            </p>
+        </td>
+        </tr>
+        </f:for>
+       </table>
+       <p>
+        <f:link.action action="add" controller="Document" arguments="{bestand:bestand}">
+           <img src="<f:uri.image src='fileadmin/icons/add.png' />" />  
+           neues Dokument im Bestand {bestand.name} anlegen
+        </f:link.action>
+       </p>
+       <p>
+        <f:link.action action="add" controller="Person" arguments="{bestand:bestand}">
+          <img src="<f:uri.image src='fileadmin/icons/add.png' />" />  
+          neue Person im Bestand "{bestand.name}" anlegen
+        </f:link.action>
+      </p>
+    </td>  
+   </tr> 
+   </f:for>  
+  </table> 
+  
+  <p>
+   <f:link.action action="new">
+    <img src="<f:uri.image src='fileadmin/icons/add.png' />" /> neuen Bestand anlegen
+   </f:link.action>
+  </p>
+      
+</f:section>

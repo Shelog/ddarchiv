@@ -1,0 +1,13 @@
+<f:layout name="Default" />
+
+<f:section name="main">
+<h1>Einzelansicht Dokument</h1>
+ 
+<f:flashMessages />
+<p>
+<img src="<f:uri.image src='uploads/tx_ddarchiv/{document.image}' width='400' />" />
+</p>
+<f:render partial="Document/Properties" arguments="{document:document}" />
+<f:link.action action="list" controller="Bestand">Zurück zur Liste der Best&auml;nde</f:link.action><br />
+     
+</f:section>

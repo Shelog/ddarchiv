@@ -1,0 +1,14 @@
+<f:layout name="Default" />
+
+<f:section name="main">
+<h1>Neuer Bestand</h1>
+
+<f:flashMessages />
+
+<f:render partial="FormErrors" />
+
+<f:form method="post" action="create"  name="newBestand" object="{newBestand}">
+<f:render partial="Bestand/FormFields" />
+	<f:form.submit value="neuen Bestand anlegen" />
+</f:form>
+</f:section>
