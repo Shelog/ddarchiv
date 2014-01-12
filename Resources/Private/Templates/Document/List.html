@@ -1,0 +1,17 @@
+{namespace pb=Tx_Ddarchiv_ViewHelpers}
+
+<f:layout name="Default" />
+
+<f:section name="main">
+
+<h2>Suchergebnis</h2>
+
+<f:flashMessages />
+
+ <f:for each="{documents}" as="document">
+   <p>
+  {document.title}  
+   </p>
+ </f:for>
+      
+</f:section>
