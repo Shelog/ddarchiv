@@ -1,31 +1,40 @@
 <f:layout name="Default" />
 
 <f:section name="main">
-
-<h1>{bestand.name}
-  <f:link.action action="edit" arguments="{bestand:bestand}">
-    <img src="<f:uri.image src='fileadmin/icons/edit.gif' />" />
-  </f:link.action>
-</h1>
+<h1>Bestand {bestand.name}</h1>
 
 <f:flashMessages />
-
-<table>
-  <tr>
-    <td>
-      <img src="<f:uri.image src='uploads/tx_ddarchiv/{bestand.image}' width='400' />" />
-    </td>
-    <td width="400">
-	    <p>
-			{bestand.description}
-		  </p>
-    </td>
-  </tr>
-</table>
+<div style="float:left;border:1px solid #666;margin:0 20px 20px 0">
+	<img src="<f:uri.image src='uploads/tx_ddarchiv/{bestand.image}' width='400' />" />
+</div>
 
 <f:render partial="Bestand/Properties" arguments="{bestand:bestand}" />
+
+<hr style="clear:both">
+
+<div style="float:left;width:420px;margin:0 20px 20px 0">
+<h2>Personenverzeichnis</h2>
+	<f:for each="{bestand.persons}" as="person">
+    <div style="clear:both">
+    	<p>
+		<f:link.action action="show" controller="Person" arguments="{person : person}">{person.firstname} {person.name}</f:link.action>
+		</p>
+	 </div>	
+	</f:for>
+</div>
+<div style="float:left;margin:0 20px 20px 0">	
+<h2>Dokumente</h2>
+	<f:for each="{bestand.documents}" as="document">
+    <div style="clear:both">
+    	<p>
+		<f:link.action action="show" controller="Document" arguments="{document : document}">{document.title}</f:link.action>
+		</p>
+	 </div>	
+	</f:for>
+</div>	
+<hr style="clear:both">
 <p>
-<f:link.action action="list">Zur Listenansicht</f:link.action><br />
+<f:link.action action="list">Zur Liste</f:link.action>
 </p>
 
 </f:section>
