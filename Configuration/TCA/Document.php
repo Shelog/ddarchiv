@@ -139,7 +139,7 @@ $TCA['tx_ddarchiv_domain_model_document'] = array(
 			'config' => array(
 				'type' => 'input',
 				'size' => 30,
-				'eval' => 'double6'
+				'eval' => 'double2'
 			),
 		),
 		'latitude' => array(
@@ -148,7 +148,7 @@ $TCA['tx_ddarchiv_domain_model_document'] = array(
 			'config' => array(
 				'type' => 'input',
 				'size' => 30,
-				'eval' => 'double6'
+				'eval' => 'double2'
 			),
 		),
 		'image' => array(
@@ -169,12 +169,13 @@ $TCA['tx_ddarchiv_domain_model_document'] = array(
 			'label' => 'LLL:EXT:ddarchiv/Resources/Private/Language/locallang_db.xml:tx_ddarchiv_domain_model_document.persons',
 			'config' => array(
 				'type' => 'select',
+        'foreign_class' => 'Tx_Ddarchiv_Domain_Model_Person',
 				'foreign_table' => 'tx_ddarchiv_domain_model_person',
 				'MM' => 'tx_ddarchiv_document_person_mm',
 				'size' => 10,
 				'autoSizeMax' => 30,
 				'maxitems' => 9999,
-				'multiple' => 1,
+				'multiple' => 0,
 				'wizards' => array(
 					'_PADDING' => 1,
 					'_VERTICAL' => 1,
