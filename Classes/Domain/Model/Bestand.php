@@ -3,7 +3,7 @@
 /***************************************************************
  *  Copyright notice
  *
- *  (c) 2012 Iris Schilke <ischilke@googlemail.com>, Kaitzbach Webdesign
+ *  (c) 2014 Iris Schilke <ischilke@googlemail.com>, Kaitzbach Webdesign
  *  
  *  All rights reserved
  *
@@ -59,14 +59,14 @@ class Tx_Ddarchiv_Domain_Model_Bestand extends Tx_Extbase_DomainObject_AbstractE
 	/**
 	 * von (Jahr)
 	 *
-	 * @var int
+	 * @var string
 	 */
 	protected $yearFrom;
 
 	/**
 	 * bis (Jahr)
 	 *
-	 * @var int
+	 * @var string
 	 */
 	protected $yearTo;
 
@@ -198,7 +198,7 @@ class Tx_Ddarchiv_Domain_Model_Bestand extends Tx_Extbase_DomainObject_AbstractE
 	/**
 	 * Returns the yearFrom
 	 *
-	 * @return string $yearFrom
+	 * @return DateTime $yearFrom
 	 */
 	public function getYearFrom() {
 		return $this->yearFrom;
@@ -207,7 +207,7 @@ class Tx_Ddarchiv_Domain_Model_Bestand extends Tx_Extbase_DomainObject_AbstractE
 	/**
 	 * Sets the yearFrom
 	 *
-	 * @param string $yearFrom
+	 * @param DateTime $yearFrom
 	 * @return void
 	 */
 	public function setYearFrom($yearFrom) {
@@ -217,7 +217,7 @@ class Tx_Ddarchiv_Domain_Model_Bestand extends Tx_Extbase_DomainObject_AbstractE
 	/**
 	 * Returns the yearTo
 	 *
-	 * @return string $yearTo
+	 * @return DateTime $yearTo
 	 */
 	public function getYearTo() {
 		return $this->yearTo;
@@ -226,7 +226,7 @@ class Tx_Ddarchiv_Domain_Model_Bestand extends Tx_Extbase_DomainObject_AbstractE
 	/**
 	 * Sets the yearTo
 	 *
-	 * @param string $yearTo
+	 * @param DateTime $yearTo
 	 * @return void
 	 */
 	public function setYearTo($yearTo) {
@@ -329,25 +329,15 @@ class Tx_Ddarchiv_Domain_Model_Bestand extends Tx_Extbase_DomainObject_AbstractE
 		$this->documents->detach($documentToRemove);
 	}
 
-
-                                                             
-  /**
+	/**
 	 * Returns the documents
 	 *
 	 * @return Tx_Extbase_Persistence_ObjectStorage<Tx_Ddarchiv_Domain_Model_Document> $documents
 	 */
 	public function getDocuments() {
-		if ($this->documents instanceof Tx_Extbase_Persistence_LazyLoadingProxy) {
-    
-      $this->documents->loadRealInstance();
-    
-    }
-    
-    return clone $this->documents;
+		return $this->documents;
 	}
-  
-  
-  
+
 	/**
 	 * Sets the documents
 	 *
@@ -357,8 +347,6 @@ class Tx_Ddarchiv_Domain_Model_Bestand extends Tx_Extbase_DomainObject_AbstractE
 	public function setDocuments(Tx_Extbase_Persistence_ObjectStorage $documents) {
 		$this->documents = $documents;
 	}
-  
-  
 
 	/**
 	 * Adds a Person
