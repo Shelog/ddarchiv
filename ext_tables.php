@@ -13,7 +13,13 @@ Tx_Extbase_Utility_Extension::registerPlugin(
 //$TCA['tt_content']['types']['list']['subtypes_addlist'][$pluginSignature] = 'pi_flexform';
 //t3lib_extMgm::addPiFlexFormValue($pluginSignature, 'FILE:EXT:' . $_EXTKEY . '/Configuration/FlexForms/flexform_' .pi1. '.xml');
 
+
+
+
+
+
 t3lib_extMgm::addStaticFile($_EXTKEY, 'Configuration/TypoScript', 'Stadtteilarchiv');
+
 
 t3lib_extMgm::addLLrefForTCAdescr('tx_ddarchiv_domain_model_bestand', 'EXT:ddarchiv/Resources/Private/Language/locallang_csh_tx_ddarchiv_domain_model_bestand.xml');
 t3lib_extMgm::allowTableOnStandardPages('tx_ddarchiv_domain_model_bestand');
@@ -74,7 +80,7 @@ t3lib_extMgm::allowTableOnStandardPages('tx_ddarchiv_domain_model_person');
 $TCA['tx_ddarchiv_domain_model_person'] = array(
 	'ctrl' => array(
 		'title'	=> 'LLL:EXT:ddarchiv/Resources/Private/Language/locallang_db.xml:tx_ddarchiv_domain_model_person',
-		'label' => 'name',
+		'label' => 'title',
 		'tstamp' => 'tstamp',
 		'crdate' => 'crdate',
 		'cruser_id' => 'cruser_id',
