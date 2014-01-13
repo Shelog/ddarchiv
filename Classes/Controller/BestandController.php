@@ -3,7 +3,7 @@
 /***************************************************************
  *  Copyright notice
  *
- *  (c) 2012 Iris Schilke <ischilke@googlemail.com>, Kaitzbach Webdesign
+ *  (c) 2014 Iris Schilke <ischilke@googlemail.com>, Kaitzbach Webdesign
  *  
  *  All rights reserved
  *
@@ -27,20 +27,19 @@
 
 /**
  *
+ *
  * @package ddarchiv
  * @license http://www.gnu.org/licenses/lgpl.html GNU Lesser General Public License, version 3 or later
  *
  */
 class Tx_Ddarchiv_Controller_BestandController extends Tx_Extbase_MVC_Controller_ActionController {
 
-
-  /**
+	/**
 	 * bestandRepository
 	 *
 	 * @var Tx_Ddarchiv_Domain_Repository_BestandRepository
 	 */
 	protected $bestandRepository;
-
 
 	/**
 	 * injectBestandRepository
@@ -51,9 +50,8 @@ class Tx_Ddarchiv_Controller_BestandController extends Tx_Extbase_MVC_Controller
 	public function injectBestandRepository(Tx_Ddarchiv_Domain_Repository_BestandRepository $bestandRepository) {
 		$this->bestandRepository = $bestandRepository;
 	}
-  
-  
-  /**
+
+	/**
 	 * action list
 	 *
 	 * @return void
@@ -62,7 +60,6 @@ class Tx_Ddarchiv_Controller_BestandController extends Tx_Extbase_MVC_Controller
 		$bestands = $this->bestandRepository->findAll();
 		$this->view->assign('bestands', $bestands);
 	}
-   
 
 	/**
 	 * action show
@@ -72,64 +69,6 @@ class Tx_Ddarchiv_Controller_BestandController extends Tx_Extbase_MVC_Controller
 	 */
 	public function showAction(Tx_Ddarchiv_Domain_Model_Bestand $bestand) {
 		$this->view->assign('bestand', $bestand);
-	}
-  
-  /**
-	 * action new
-	 * @param $newBestand
-	 * @dontvalidate $newBestand
-	 * @return void
-	 */
-	public function newAction(Tx_Ddarchiv_Domain_Model_Bestand $newBestand = NULL) {
-
-		$this->view->assign('newBestand', $newBestand);
-	}
-
-	/**
-	 * action create
-	 *
-	 * @param $newBestand
-	 * @return void
-	 */
-	public function createAction(Tx_Ddarchiv_Domain_Model_Bestand $newBestand) {
-		$this->bestandRepository->add($newBestand);
-		$this->flashMessageContainer->add('Neuer Bestand wurde angelegt.');
-		$this->redirect('list');
-	}
-
-	/**
-	 * action edit
-	 *
-	 * @param $bestand
-	 * @return void
-	 */
-	public function editAction(Tx_Ddarchiv_Domain_Model_Bestand $bestand) {
-		$this->view->assign('bestand', $bestand);
-	}
-
-	/**
-	 * action update
-	 * @param $bestand
-	 * @return void
-	 */
-	public function updateAction(Tx_Ddarchiv_Domain_Model_Bestand $bestand) {
-    
-		$this->bestandRepository->update($bestand);
-		$this->flashMessageContainer->add('Der Bestand wurde bearbeitet.');
-    $this->redirect('list');
-  }
-
-	/**
-	 * action delete
-	 *
-	 * @param $bestand
-	 * @return void
-	 */
-	public function deleteAction(Tx_Ddarchiv_Domain_Model_Bestand $bestand) {
-    
-//		$this->bestandRepository->remove($bestand);
-		$this->flashMessageContainer->add('Diese Aktion wurde gesperrt');
-		$this->redirect('list');
 	}
 
 }
