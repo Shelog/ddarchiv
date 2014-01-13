@@ -1,9 +1,9 @@
 <?php
- 
- /***************************************************************
+
+/***************************************************************
  *  Copyright notice
  *
- *  (c) 2012 Iris Schilke <ischilke@googlemail.com>, Kaitzbach Webdesign
+ *  (c) 2014 Iris Schilke <ischilke@googlemail.com>, Kaitzbach Webdesign
  *  
  *  All rights reserved
  *
@@ -24,7 +24,9 @@
  *  This copyright notice MUST APPEAR in all copies of the script!
  ***************************************************************/
 
- /**
+
+/**
+ *
  *
  * @package ddarchiv
  * @license http://www.gnu.org/licenses/lgpl.html GNU Lesser General Public License, version 3 or later
@@ -32,27 +34,7 @@
  */
 class Tx_Ddarchiv_Controller_PersonController extends Tx_Extbase_MVC_Controller_ActionController {
 
- /**
-  * @var Tx_Ddarchiv_Domain_Model_PersonRepository
-  * 
-  */
- protected $personRepository;    
-
-  
- /**
-  * Initialisierung der aktuellen Aktion
-  * 
-  * @return void
-  *
-  */
- public function initializeAction() {
- 
-   $this->personRepository = t3lib_div::makeInstance('Tx_Ddarchiv_Domain_Repository_PersonRepository');
- 
- }   
- 
- 
-  /**
+	/**
 	 * action list
 	 *
 	 * @return void
@@ -62,87 +44,15 @@ class Tx_Ddarchiv_Controller_PersonController extends Tx_Extbase_MVC_Controller_
 		$this->view->assign('persons', $persons);
 	}
 
-
- /**
-  * @param Tx_Ddarchiv_Domain_Model_Bestand $bestand
-  * @param Tx_Ddarchiv_Domain_Model_Person $newPerson
-  * @return string
-  * @dontvalidate $newPerson
-  */
-  public function addAction(Tx_Ddarchiv_Domain_Model_Bestand $bestand, Tx_Ddarchiv_Domain_Model_Person $newPerson = NULL) {
-       $this->view->assign('persons', $this->personRepository->findAll());
-       $this->view->assign('bestand', $bestand);
-       $this->view->assign('newPerson', $newPerson);
-  }
-  
-  
-  /**
+	/**
 	 * action show
-	 * 
-	 * @param mixed Tx_Ddarchiv_Domain_Model_Person $person  
-	 * 
+	 *
+	 * @param $person
 	 * @return void
-	 * @dontvalidate $variable
-    * @dontverifyrequesthash
 	 */
 	public function showAction(Tx_Ddarchiv_Domain_Model_Person $person) {
-	
-    $this->view->assign('person', $person);
-	}
-
-    
-  /**
-   * @param Tx_Ddarchiv_Domain_Model_Bestand $bestand
-   * @param Tx_Ddarchiv_Domain_Model_Person $newPerson
-   * @return void
-   * @dontvalidate $newPerson
-   */           
-   public function createAction(Tx_Ddarchiv_Domain_Model_Bestand $bestand, Tx_Ddarchiv_Domain_Model_Person $newPerson) {
-     
-       $bestand->addPerson($newPerson);
-       $this->redirect('list', 'Bestand', NULL, array('bestand' => $bestand));
-     
-   } 
-   
-   
-  /**
-	 * action edit
-	 *
-	 * @param $document
-	 * @return void
-	 */
-	public function editAction(Tx_Ddarchiv_Domain_Model_Person $person) {
 		$this->view->assign('person', $person);
 	}
 
-	/**
-	 * action update
-	 * @param Tx_Ddarchiv_Domain_Model_Bestand $bestand
-	 * @param Tx_Ddarchiv_Domain_Model_Person $person
-	 * @return void
-	 */
-	public function updateAction(Tx_Ddarchiv_Domain_Model_Person $person) {
-    
-		$this->personRepository->update($person);
-		$this->flashMessageContainer->add('Die Personen-Datei wurde bearbeitet.');
-    $this->redirect('list', 'Bestand', NULL, array('bestand' => $bestand));
-  }
-  
-
-	/**
-	 * action delete
-	 * @param Tx_Ddarchiv_Domain_Model_Bestand $bestand
-	 * @param Tx_Ddarchiv_Domain_Model_Person $person
-	 * @dontvalidate $Document
-	 * @return void
-   */	 
-	public function deleteAction(Tx_Ddarchiv_Domain_Model_Bestand $bestand, Tx_Ddarchiv_Domain_Model_Person $person) {
-    
-		$bestand->removePerson($person);
-		$this->redirect('list', 'Bestand', NULL, array('bestand' => $bestand));
-	}
-  
-
- }  
-
+}
 ?>
