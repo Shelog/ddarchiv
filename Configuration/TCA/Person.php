@@ -138,6 +138,16 @@ $TCA['tx_ddarchiv_domain_model_person'] = array(
 				'eval' => 'int'
 			),
 		),
+    	'bestand' => array(
+			'config' => array(
+				'type' => 'passthrough',
+			),
+		),
+    	'document' => array(
+			'config' => array(
+				'type' => 'passthrough',
+			),
+		),
 	),
 );
 ?>
