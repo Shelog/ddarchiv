@@ -1,0 +1,13 @@
+<f:layout name="Default" />
+
+<f:section name="main">
+<h2>Personenverzeichnis
+<h1>{person.firstname} {person.name} </h1>
+
+<f:flashMessages />
+<f:render partial="Person/Properties" arguments="{person:person}" />
+<hr>
+<p>
+<f:link.action action="list" controller="bestand">Zur&uuml;ck zur Bestandsliste</f:link.action><br />
+</p>
+</f:section>
