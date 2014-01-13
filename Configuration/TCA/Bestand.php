@@ -98,7 +98,7 @@ $TCA['tx_ddarchiv_domain_model_bestand'] = array(
 			'label' => 'LLL:EXT:ddarchiv/Resources/Private/Language/locallang_db.xml:tx_ddarchiv_domain_model_bestand.name',
 			'config' => array(
 				'type' => 'input',
-				'size' => 300,
+				'size' => 30,
 				'eval' => 'trim,required'
 			),
 		),
@@ -107,8 +107,8 @@ $TCA['tx_ddarchiv_domain_model_bestand'] = array(
 			'label' => 'LLL:EXT:ddarchiv/Resources/Private/Language/locallang_db.xml:tx_ddarchiv_domain_model_bestand.description',
 			'config' => array(
 				'type' => 'text',
-				'cols' => 300,
-				'rows' => 10,
+				'cols' => 40,
+				'rows' => 15,
 				'eval' => 'trim'
 			),
 		),
@@ -128,8 +128,8 @@ $TCA['tx_ddarchiv_domain_model_bestand'] = array(
 			'config' => array(
 				'type' => 'input',
 				'size' => 4,
+				'max' => 4,
 				'eval' => 'int',
-			
 			),
 		),
 		'year_to' => array(
@@ -138,6 +138,7 @@ $TCA['tx_ddarchiv_domain_model_bestand'] = array(
 			'config' => array(
 				'type' => 'input',
 				'size' => 4,
+				'max' => 4,
 				'eval' => 'int',
 			),
 		),
@@ -156,7 +157,7 @@ $TCA['tx_ddarchiv_domain_model_bestand'] = array(
 			'config' => array(
 				'type' => 'input',
 				'size' => 30,
-				'eval' => 'double6'
+				'eval' => 'double2'
 			),
 		),
 		'latitude' => array(
@@ -165,7 +166,7 @@ $TCA['tx_ddarchiv_domain_model_bestand'] = array(
 			'config' => array(
 				'type' => 'input',
 				'size' => 30,
-				'eval' => 'double6'
+				'eval' => 'double2'
 			),
 		),
 		'image' => array(
@@ -186,6 +187,7 @@ $TCA['tx_ddarchiv_domain_model_bestand'] = array(
 			'label' => 'LLL:EXT:ddarchiv/Resources/Private/Language/locallang_db.xml:tx_ddarchiv_domain_model_bestand.documents',
 			'config' => array(
 				'type' => 'inline',
+        'foreign_class' => 'Tx_Ddarchiv_Domain_Model_Document',
 				'foreign_table' => 'tx_ddarchiv_domain_model_document',
 				'foreign_field' => 'bestand',
 				'maxitems'      => 9999,
@@ -203,12 +205,13 @@ $TCA['tx_ddarchiv_domain_model_bestand'] = array(
 			'label' => 'LLL:EXT:ddarchiv/Resources/Private/Language/locallang_db.xml:tx_ddarchiv_domain_model_bestand.persons',
 			'config' => array(
 				'type' => 'select',
+        'foreign_class' => 'Tx_Ddarchiv_Domain_Model_Person',
 				'foreign_table' => 'tx_ddarchiv_domain_model_person',
 				'MM' => 'tx_ddarchiv_bestand_person_mm',
 				'size' => 10,
 				'autoSizeMax' => 30,
 				'maxitems' => 9999,
-				'multiple' => 1,
+				'multiple' => 0,
 				'wizards' => array(
 					'_PADDING' => 1,
 					'_VERTICAL' => 1,
