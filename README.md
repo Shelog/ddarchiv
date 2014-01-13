@@ -10,7 +10,7 @@ Es gibt folgende Ansichten:
 <ul>
 <li>Liste der Bestände</li>
 <li>Einzelansicht eines Bestandes mit Listen der Dokumente und Personen</li>
-<li>Einzelansicht eines okumentes</li>
-<li>Einzelansicht der PErsonendaten</li>
+<li>Einzelansicht eines Dokumentes</li>
+<li>Einzelansicht der Personendaten</li>
 </ul>
 
