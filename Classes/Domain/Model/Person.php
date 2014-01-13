@@ -3,7 +3,7 @@
 /***************************************************************
  *  Copyright notice
  *
- *  (c) 2012 Iris Schilke <ischilke@googlemail.com>, Kaitzbach Webdesign
+ *  (c) 2014 Iris Schilke <ischilke@googlemail.com>, Kaitzbach Webdesign
  *  
  *  All rights reserved
  *
@@ -33,8 +33,8 @@
  *
  */
 class Tx_Ddarchiv_Domain_Model_Person extends Tx_Extbase_DomainObject_AbstractEntity {
-    
-  /**
+
+	/**
 	 * akademischer Grad, Adelstitel
 	 *
 	 * @var string
