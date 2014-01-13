@@ -3,7 +3,7 @@
 /***************************************************************
  *  Copyright notice
  *
- *  (c) 2012 Iris Schilke <ischilke@googlemail.com>, Kaitzbach Webdesign
+ *  (c) 2014 Iris Schilke <ischilke@googlemail.com>, Kaitzbach Webdesign
  *  
  *  All rights reserved
  *
@@ -26,73 +26,13 @@
 
 
 /**
+ *
+ *
  * @package ddarchiv
  * @license http://www.gnu.org/licenses/lgpl.html GNU Lesser General Public License, version 3 or later
  *
  */
 class Tx_Ddarchiv_Domain_Model_Document extends Tx_Extbase_DomainObject_AbstractEntity {
-
-
-  /**
-	 * @var int Die Uid des Bestandes, zu dem das Dokument gehört
-	 */
-  protected $bestandUid;
-  
-  
-  /**
-	 * Setzt die Uid des Bestandes, zu dem das Dokument gehört
-	 * 
-	 * @param int $bestandUid Die Uid des Bestandes
-	 * @return void
-	 */
-  public function setBestandUid($bestandUid) {
-  
-    $this->bestandUid = $bestandUid;
-  
-  }                
-  
-  
-  /**
-   * Gibt die Uid des Bestandes, zu dem das Dokument gehört, zurück
-   *      
-   * @return int Die Uid des Bestandes
-   */
-  public function getBestandUid() {
-  
-    return $this->bestandUid;
-  
-  }        
-  
-  
-  /**
-	 * @var string Suchwort
-	 */
-  protected $search;
-  
-  
-  /**
-	 * Setzt Suchwort
-	 * 
-	 * @param string $search Suchwort
-	 * @return void
-	 */
-  public function setSearch($search) {
-  
-    $this->search = $search;
-  
-  }     
-  
-   /**
-   * Gibt Suchwort zurück
-   *      
-   * @return string $search Suchwort
-   */
-  public function getSearch() {
-  
-    return $this->search;
-  
-  }    
-  
 
 	/**
 	 * Titel
@@ -102,14 +42,12 @@ class Tx_Ddarchiv_Domain_Model_Document extends Tx_Extbase_DomainObject_Abstract
 	 */
 	protected $title;
 
-
 	/**
 	 * Beschreibung
 	 *
 	 * @var string
 	 */
 	protected $description;
-
 
 	/**
 	 * Standort (Karton, Mappe, Seite)
@@ -119,14 +57,12 @@ class Tx_Ddarchiv_Domain_Model_Document extends Tx_Extbase_DomainObject_Abstract
 	 */
 	protected $loc;
 
-
 	/**
 	 * Datum des Dokuments
 	 *
 	 * @var DateTime
 	 */
 	protected $docDate;
-
 
 	/**
 	 * geographische Länge
@@ -135,14 +71,12 @@ class Tx_Ddarchiv_Domain_Model_Document extends Tx_Extbase_DomainObject_Abstract
 	 */
 	protected $longitude;
 
-
 	/**
 	 * geographische Breite
 	 *
 	 * @var float
 	 */
 	protected $latitude;
-
 
 	/**
 	 * Bild
@@ -151,14 +85,12 @@ class Tx_Ddarchiv_Domain_Model_Document extends Tx_Extbase_DomainObject_Abstract
 	 */
 	protected $image;
 
-
 	/**
 	 * Personen, auf die sich das Dokument bezieht
 	 *
 	 * @var Tx_Extbase_Persistence_ObjectStorage<Tx_Ddarchiv_Domain_Model_Person>
 	 */
 	protected $persons;
-  
 
 	/**
 	 * __construct
@@ -169,7 +101,6 @@ class Tx_Ddarchiv_Domain_Model_Document extends Tx_Extbase_DomainObject_Abstract
 		//Do not remove the next line: It would break the functionality
 		$this->initStorageObjects();
 	}
-
 
 	/**
 	 * Initializes all Tx_Extbase_Persistence_ObjectStorage properties.
@@ -212,7 +143,6 @@ class Tx_Ddarchiv_Domain_Model_Document extends Tx_Extbase_DomainObject_Abstract
 	public function getDescription() {
 		return $this->description;
 	}
-
 
 	/**
 	 * Sets the description
